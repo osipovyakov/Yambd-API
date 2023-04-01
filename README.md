@@ -57,12 +57,12 @@
 
 - Клонировать репозиторий и перейти в него в командной строке:
 ```
-git clone https://github.com/AKEkt/api_yamdb.git cd api_yamdb
+git clone git@github.com:osipovyakov/Yamdb-API.git
 ```
 
 - Cоздать и активировать виртуальное окружение:
 ```
-    python3 -m venv env
+    python -m venv env
     source env/bin/activate
 ```
 - Установить зависимости из файла requirements.txt
@@ -72,18 +72,17 @@ git clone https://github.com/AKEkt/api_yamdb.git cd api_yamdb
 ```
 - Выполнить миграции:
 ```
-    python3 manage.py makemigrations
+    python manage.py makemigrations
     python manage.py migrate
 ```
 
 - В папке с файлом manage.py выполнить команду:
 ```
-    git clone https://github.com/AKEkt/api_yamdb.git
-    cd api_yamdb
+    python manage.py runserver
 ```
 - Для загрузки тестовых данных из csv-файлов выполнить команду:
 ```
-    python3 manage.py load_base
+    python manage.py load_base
 ```
 ### Примеры запросов для авторизованных пользователей
  Получение данных своей учетной записи:
